@@ -1,0 +1,39 @@
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Report</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="validation.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hostel Accommodation Report</h2>
+    <form action="generate_report.php" method="POST">
+        <button type="submit">Generate Report</button>
+    </form>
+</body>
+</html>

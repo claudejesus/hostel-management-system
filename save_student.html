@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Admitted Student Form</h2>
+    <!-- <form id="admitted_student" action="save_student.php" method="POST"> -->
+    <form id="admitted_student" action="" method="POST">
+        including<save_student.php></save_student.php>
+
+        <div class="form-group">
+            <label for="reg_number">Registration Number</label>
+            <input type="text" id="reg_number" name="registration_number" required>
+        </div>
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="telephone">Telephone</label>
+            <input type="tel" id="telephone" name="telephone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department:</label>
+<select name="department" id="department" required>
+    <option value="" disabled selected>Select Program</option>
+    <option value="Information and Technology">Information and Technology</option>
+    <option value="E-commerce">E-commerce</option>
+    <option value="Crop Production">Crop Production</option>
+    <option value="Food Processing">Food Processing</option>
+    <option value="Construction Technology">Construction Technology</option>
+    <option value="Electrical Technology">Electrical Technology</option>
+    <option value="Electrical Automation Technology">Electrical Automation Technology</option>
+    <option value="Hospitality Management">Hospitality Management</option>
+</select>
+        </div>
+        <div class="form-group">
+            <label for="level">Level</label>
+            <input type="text" id="level" name="level" required>
+        </div>
+        <div class="form-group">
+            <label for="academic_year">Academic Year</label>
+            <input type="text" id="academic_year" name="academic_year" required>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
