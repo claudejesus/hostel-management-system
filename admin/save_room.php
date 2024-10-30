@@ -1,9 +1,9 @@
 <?php
 // Database connection parameters
-$host = 'localhost';       // Replace with your host name
-$username = 'root';        // Replace with your MySQL username
-$password = '';            // Replace with your MySQL password
-$database = 'rpmusazecollegehostel'; // Replace with your database name
+$host = 'localhost';      
+$username = 'root';        
+$password = '';            
+$database = 'rpmusazecollegehostel'; 
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $database);
@@ -16,8 +16,7 @@ if ($conn->connect_error) {
 // Check if form data is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve and sanitize data
-    //$room_number = $conn->real_escape_string($_POST['room_number']);
-    //$room_category = $conn->real_escape_string($_POST['room_category']);
+    
     $room_number = $_POST['room_number'];
     $room_category = $_POST['room_category'];
 

@@ -9,7 +9,14 @@
         
 <body>
     <h2>Add Room Details</h2>
-    <form action="save_room.php" method="POST">
+
+    <?php
+    session_start();
+    include('save_room.php');
+    
+    ?>
+    <!-- <form action="save_room.php" method="POST"> -->
+    <form action="#" method="POST">
         <label for="room_number">Room Number:</label>
         <input type="number" id="room_number" name="room_number" required>
         <br><br>
