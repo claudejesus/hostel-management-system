@@ -68,4 +68,4 @@ $bookings_count = $bookings_result->fetch_assoc()['bookings_count'] ?? 0;
             <div class="stat">
                 <h3>Number of accomodeted students</h3>
                 <p><?php echo $bookings_count; ?></p>
-            
+        
