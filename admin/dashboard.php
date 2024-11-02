@@ -36,17 +36,17 @@ $bookings_count = $bookings_result->fetch_assoc()['bookings_count'] ?? 0;
 <head>
     <meta charset="UTF-8">
     <title>Staff Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="dashboard-container">
     <!-- Sidebar Navigation -->
-    <div class="sidebar">
+    <div class="sidebar" >
         <h2>Dashboard</h2>
         <a href="dashboard.php">Home</a>
         <a href="generate_report.php">Reports</a>
         <a href="add_staff.php">Add Staff</a>      
-        <a href="add_room.html">Add Rooms</a>
+        <a href="add_room.php">Add Rooms</a>
         <a href="add_bed.php">Add Beds</a>
         <a href="add_staff.php">Add Students</a>
     </div>

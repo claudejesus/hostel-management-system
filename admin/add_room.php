@@ -15,8 +15,8 @@
     include('save_room.php');
     
     ?>
-    <!-- <form action="save_room.php" method="POST"> -->
-    <form action="#" method="POST">
+    <form action="save_room.php" method="POST">
+    <!-- <form action="#" method="POST"> -->
         <label for="room_number">Room Number:</label>
         <input type="number" id="room_number" name="room_number" required>
         <br><br>

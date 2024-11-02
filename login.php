@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Successful login
             $_SESSION['user'] = $user['email'];
             $_SESSION['success'] = "Login successful!";
-            header("Location: dashboard.php");
+            header("Location: book_hostel.html");
             exit();
         }
     }
