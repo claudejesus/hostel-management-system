@@ -36,7 +36,7 @@ $bookings_count = $bookings_result->fetch_assoc()['bookings_count'] ?? 0;
 <head>
     <meta charset="UTF-8">
     <title>Staff Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="dashboard-container">
