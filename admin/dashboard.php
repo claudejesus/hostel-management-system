@@ -32,23 +32,36 @@ $bookings_count = $bookings_result->fetch_assoc()['bookings_count'] ?? 0;
 ?>
 
 <!DOCTYPE html>
+<!-- <html lang="en"> -->
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="dashboard-container">
+
     <!-- Sidebar Navigation -->
     <div class="sidebar" >
         <h2>Dashboard</h2>
-        <a href="dashboard.php">Home</a>
-        <a href="generate_report.php">Reports</a>
-        <a href="add_staff.php">Add Staff</a>      
-        <a href="add_room.php">Add Rooms</a>
-        <a href="add_bed.php">Add Beds</a>
-        <a href="add_staff.php">Add Students</a>
+        <!-- <a href="#" onclick="loadContent('dashboard.php')">Home</a> -->
+        <a onclick="location.href='?action=reload'">Home</a>
+        <a href="#" onclick="loadContent('generate_report.php')">Reports</a>
+        <a href="#" onclick="loadContent('add_staff.php')">Add Staff</a>      
+        <a href="#" onclick="loadContent('add_room.php')">Add Rooms</a>
+        <a href="#" onclick="loadContent('add_bed.php')">Add Beds</a>
+        <!-- <a href="add_bed.php">Add Beds</a> -->
+        <div class="submenu">
+            <a href="javascript:void(0);" class="submenu-toggle">Add Students</a>
+            <div class="submenu-content">                
+                <a href="add_student.php">Add New Student</a>
+                <a href="upload_student_list.php">Upload List of Admitted Students</a>
+            </div>
+        </div>
     </div>
 
     <!-- Main Content Area -->
@@ -66,6 +79,35 @@ $bookings_count = $bookings_result->fetch_assoc()['bookings_count'] ?? 0;
                 <p><?php echo $student_count; ?></p>
             </div>
             <div class="stat">
+            
                 <h3>Number of accomodeted students</h3>
                 <p><?php echo $bookings_count; ?></p>
-        
+            </div>
+        </div>
+        <div id="content-area">
+
+        </div>
+    </div>
+</div>
+
+    <script>
+
+        function toggleDropdown() {
+            event.target.nextElementSibling.classList.toggle("show");
+        }
+        // Function to load content dynamically into #content-area without page reload
+        function loadContent(page) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', page, true);
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    document.getElementById('content-area').innerHTML = this.responseText;
+                }
+            }
+            xhr.send();
+        }
+    </script>
+
+    </body>
+
+</html>
